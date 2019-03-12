@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;
+	min-height: 40px;
+	max-width: 25%;
+	background-color: infobackground;}
+img {
+    border-radius: 50%;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    
+    
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+	height:40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 25px;
+    padding-bottom: 1cm;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 100px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+       
+       
+    }
+}
+
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+</style>
+
+<script type="text/javascript">
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+</script>
+</head>
+<body>
+<center><h1><p class="w3-myfont">Login Form</p></h1></cenyer>
+<!-- <span class="context-menu-one btn btn-neutral">right click me</span> -->
+
+<form action="LoginServlet" method="post">
+  <div class="imgcontainer">
+    <img src="download.png" alt="Avatar" height="120" width="120">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Enter Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Enter Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="myInput"required>
+    <input type="checkbox" onclick="myFunction()">Show Password    
+    <button type="submit">Login</button>
+    <!-- <input type="submit" value="Login" > -->
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1" align="left">
+    <button type="reset" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="forgetpwd.jsp">password?</a></span>
+    <span class="psw"> NewUser <a href="RegistrationForm.jsp"> Click </a>for Registration!</span>
+  </div>
+    <span class="psw"> For Admin<a href="adminlogin.jsp"> Click </a>Here!</span>
+</form>
+
+
+</body>
+</html>
